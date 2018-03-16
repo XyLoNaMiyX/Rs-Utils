@@ -3,9 +3,9 @@ use std::collections::HashMap;
 
 pub fn is_prime(n: u32) -> bool {
     match n {
-        n if n < 2 => false,
-        n if n < 4 => true,
+        n if n < 4 => n >= 2,
         n if n % 2 == 0 => false,
+        n if ((n - 5) % 6 != 0) && ((n - 7) % 6 != 0) => false,
         n => {
             let mut i = 3;
             let top = (n as f64).sqrt().ceil() as u32;

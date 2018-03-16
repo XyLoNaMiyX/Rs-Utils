@@ -1,5 +1,5 @@
 [package]
-name = "Rs-Utils"
+name = "rs_utils"
 version = "0.1.0"
 authors = ["Lonami Exo <totufals@hotmail.com>"]
 

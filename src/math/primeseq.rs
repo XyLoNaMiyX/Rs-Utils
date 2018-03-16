@@ -1,6 +1,16 @@
 use std::collections::HashMap;
 
 
+/// Determines if the given number is prime.
+///
+/// # Examples
+///
+/// ```
+/// use rs_utils::math::primeseq::*;
+///
+/// assert!(is_prime(7));
+/// assert!(!is_prime(8));
+/// ```
 pub fn is_prime(n: u32) -> bool {
     match n {
         n if n < 4 => n >= 2,
@@ -21,6 +31,8 @@ pub fn is_prime(n: u32) -> bool {
     }
 }
 
+/// Structure to hold the data needed for running the Eratosthenes sieve.
+/// Its primary use is being an iterator, yielding primes *ad infinitum*.
 pub struct Eratosthenes {
     q: u32,
     d: HashMap<u32, u32>

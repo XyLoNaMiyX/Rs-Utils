@@ -18,7 +18,7 @@ pub fn is_prime(n: u32) -> bool {
         n if ((n - 5) % 6 != 0) && ((n - 7) % 6 != 0) => false,
         n => {
             let mut i = 3;
-            let top = (n as f64).sqrt().ceil() as u32;
+            let top = (n as f64).sqrt() as u32 + 1;
             while i < top {
                 if n % i == 0 {
                     return false;
